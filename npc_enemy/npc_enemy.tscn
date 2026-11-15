@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://crhsh2jtxplg0"]
+
+[ext_resource type="Texture2D" uid="uid://cq4u7alqlmip8" path="res://assets/sprites/Mermaid_2.png" id="1_0xbse"]
+[ext_resource type="Script" uid="uid://cn7ok2mdhd8qg" path="res://npc_enemy/npc_enemy.gd" id="1_ktav4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4kxuq"]
+radius = 6.0827627
+
+[node name="npc_enemy" type="CharacterBody2D" unique_id=1284996952]
+script = ExtResource("1_ktav4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=759077737]
+position = Vector2(0, -16)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_0xbse")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=610812964]
+position = Vector2(-4, -7)
+shape = SubResource("CircleShape2D_4kxuq")

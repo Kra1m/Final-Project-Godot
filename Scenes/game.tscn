@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://byacfmys2pr8o"]
+
+[ext_resource type="PackedScene" uid="uid://c1seee4dgbpwa" path="res://player/fem_player.tscn" id="1_ebmjs"]
+[ext_resource type="PackedScene" uid="uid://crhsh2jtxplg0" path="res://npc_enemy/npc_enemy.tscn" id="2_qxrlw"]
+
+[node name="Game" type="Node2D" unique_id=2090114732]
+
+[node name="FemPlayer" parent="." unique_id=1775914483 instance=ExtResource("1_ebmjs")]
+
+[node name="Camera2D" type="Camera2D" parent="FemPlayer" unique_id=1592988968]
+physics_interpolation_mode = 1
+zoom = Vector2(4, 4)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+
+[node name="npc_enemy" parent="." unique_id=1284996952 instance=ExtResource("2_qxrlw")]
+position = Vector2(83, 0)
