@@ -3,16 +3,14 @@ class_name FemPlayer
 
 const SPEED = 200
 var current_dir = "none"
+@onready var player_collision: CollisionShape2D = $CollisionShape2D
 
-const MAX_HEALTH: int = 100
-var health_state: int = 0
 
 var can_move: bool = true
 
 
 func _ready() -> void:
 	$AnimatedSprite2D.play("idle_front")
-	health_state = MAX_HEALTH
 
 func _physics_process(delta: float) -> void:
 	if can_move: 
@@ -76,12 +74,3 @@ func play_animation(movements):
 			anim.play("walk_up")
 		elif movements == 0:
 			anim.play("idle_back")
-
-var damage: int = 0
-var healing: int = 0
-
-func getting_damage():
-	health_state -= damage
-
-func getting_healed():
-	health_state += healing

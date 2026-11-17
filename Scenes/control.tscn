@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://blxdr7gbn6yqu"]
 
+[ext_resource type="Script" uid="uid://claeoi6ah6quf" path="res://Scenes/control.gd" id="1_sjmnu"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4kxuq"]
 
 [node name="Control" type="Control" unique_id=1889363944]
@@ -9,6 +11,7 @@ anchor_bottom = 0.216
 offset_right = -400.79205
 offset_bottom = -69.968
 scale = Vector2(2, 2)
+script = ExtResource("1_sjmnu")
 
 [node name="Panel" type="Panel" parent="." unique_id=2017025437]
 layout_mode = 1
@@ -62,3 +65,6 @@ theme_override_constants/margin_bottom = 10
 [node name="Button" type="Button" parent="HBoxContainer/MarginContainer3" unique_id=1535718811]
 layout_mode = 2
 text = "RUN AWAY"
+
+[connection signal="hidden" from="." to="." method="_on_hidden"]
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]

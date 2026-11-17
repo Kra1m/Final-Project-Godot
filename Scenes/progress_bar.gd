@@ -1,9 +1,18 @@
 extends ProgressBar
 
-@export var player: FemPlayer
+class_name Healthbar_info
+
+const MAX_HEALTH = 100
+var damage: int = 0
+var healing: int = 0
 
 func _ready() -> void:
-	update_health()
+	max_value = MAX_HEALTH
+	value = max_value
 
-func update_health():
-	value = player.health_state * 100 / player.MAX_HEALTH
+func getting_damage():
+	value -= damage
+	print("-15")
+
+func getting_healed():
+	value += healing

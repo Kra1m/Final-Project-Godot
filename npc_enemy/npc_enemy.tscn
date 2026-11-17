@@ -2,9 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://cq4u7alqlmip8" path="res://assets/sprites/Mermaid_2.png" id="1_0xbse"]
 [ext_resource type="Script" uid="uid://cn7ok2mdhd8qg" path="res://npc_enemy/npc_enemy.gd" id="1_ktav4"]
+[ext_resource type="PackedScene" uid="uid://dmf01t5ttat73" path="res://Scenes/killzone/killzone.tscn" id="3_as066"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4kxuq"]
-radius = 6.0827627
+radius = 6.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mti6b"]
+radius = 23.0
 
 [node name="npc_enemy" type="CharacterBody2D" unique_id=1284996952]
 script = ExtResource("1_ktav4")
@@ -16,5 +20,11 @@ texture = ExtResource("1_0xbse")
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=610812964]
-position = Vector2(-4, -7)
+position = Vector2(0, -9)
 shape = SubResource("CircleShape2D_4kxuq")
+
+[node name="Killzone" parent="." unique_id=1461989330 instance=ExtResource("3_as066")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=582949031]
+position = Vector2(-1, -11)
+shape = SubResource("CircleShape2D_mti6b")

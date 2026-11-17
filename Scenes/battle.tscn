@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://dd5r5jifm1ca0" path="res://assets/background/spr_tileset_terrain_base_01.png" id="1_pd5xk"]
 [ext_resource type="PackedScene" uid="uid://crhsh2jtxplg0" path="res://npc_enemy/npc_enemy.tscn" id="2_1ruyk"]
 [ext_resource type="Texture2D" uid="uid://ce5a4dgfumnh1" path="res://assets/background/spr_terrains.png" id="2_f6xt6"]
-[ext_resource type="PackedScene" uid="uid://b83pisibaaepe" path="res://Scenes/health_bar.tscn" id="3_1ruyk"]
 [ext_resource type="PackedScene" uid="uid://blxdr7gbn6yqu" path="res://Scenes/control.tscn" id="6_f6xt6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ww2ai"]
@@ -519,6 +518,7 @@ position = Vector2(-107, 0)
 position = Vector2(93, 0)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1014156414]
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1535518374]
 position = Vector2(0, -77)
@@ -540,14 +540,3 @@ offset_right = 0.0
 offset_bottom = 0.16796875
 grow_horizontal = 2
 grow_vertical = 0
-
-[node name="HealthBar" parent="CanvasLayer" unique_id=1824696878 instance=ExtResource("3_1ruyk")]
-anchor_left = 0.42800003
-anchor_top = 0.037
-anchor_right = 0.572
-anchor_bottom = 0.07700001
-offset_left = 0.17996216
-offset_top = 0.024000168
-offset_right = -0.17999268
-offset_bottom = 0.27199554
-grow_vertical = 1

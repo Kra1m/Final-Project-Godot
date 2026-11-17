@@ -331,6 +331,7 @@ radius = 6.0
 height = 18.0
 
 [node name="FemPlayer" type="CharacterBody2D" unique_id=1775914483]
+collision_layer = 2
 script = ExtResource("1_82524")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=586915690]

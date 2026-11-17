@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b83pisibaaepe"]
 
 [ext_resource type="Script" uid="uid://bofjhmptu0apo" path="res://Scenes/progress_bar.gd" id="1_78m4n"]
+[ext_resource type="Script" uid="uid://cic15p2hvvsgt" path="res://Scenes/health_bar.gd" id="1_m34ix"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mm1bc"]
 
@@ -28,6 +29,7 @@ offset_right = -0.36001587
 offset_bottom = 0.19199753
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_m34ix")
 
 [node name="Panel" type="Panel" parent="." unique_id=729720893]
 layout_mode = 1
