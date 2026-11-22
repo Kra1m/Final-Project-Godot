@@ -1,11 +1,14 @@
 extends CharacterBody2D
 class_name NpcEnemy
 
-var damage: int = 5
+@onready var killing_zone: Killzone = $Killzone
+@onready var text_bubble: Text_bubble = $CanvasLayer/TextBubble
 
 func _ready() -> void:
-	pass
+	killing_zone.damage = 10
 
-func _physics_process(delta: float) -> void:
-	pass
-	
+var start_dialogue = false
+
+func dialogue_active():
+	if start_dialogue == true:
+		text_bubble.start()

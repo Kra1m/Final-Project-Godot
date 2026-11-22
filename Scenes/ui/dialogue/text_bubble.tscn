@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bvwtj1ksd8vmg"]
+
+[ext_resource type="Script" uid="uid://bv7jvh37pb575" path="res://Scenes/ui/dialogue/text_bubble.gd" id="1_4ydp6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4ydp6"]
+
+[node name="TextBubble" type="Control" unique_id=531429724]
+layout_mode = 3
+anchor_right = 0.93000007
+anchor_bottom = 0.328
+offset_right = -1.3601074
+offset_bottom = -2.5440063
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4ydp6")
+
+[node name="Panel" type="Panel" parent="." unique_id=1666809649]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=765787895]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=893016023]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=7077555]
+custom_maximum_size = Vector2(1039, 25)
+layout_mode = 2
+text = "NameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameName"
+autowrap_mode = 3
+max_lines_visible = 1
+
+[node name="Text" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=1857764922]
+custom_maximum_size = Vector2(1036, 300)
+layout_mode = 2
+text = "xtTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText"
+label_settings = SubResource("LabelSettings_4ydp6")
+autowrap_mode = 3

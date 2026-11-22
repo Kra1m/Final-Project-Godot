@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cq4u7alqlmip8" path="res://assets/sprites/Mermaid_2.png" id="1_0xbse"]
 [ext_resource type="Script" uid="uid://cn7ok2mdhd8qg" path="res://npc_enemy/npc_enemy.gd" id="1_ktav4"]
 [ext_resource type="PackedScene" uid="uid://dmf01t5ttat73" path="res://Scenes/killzone/killzone.tscn" id="3_as066"]
+[ext_resource type="PackedScene" uid="uid://bvwtj1ksd8vmg" path="res://Scenes/ui/dialogue/text_bubble.tscn" id="4_e1vpc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4kxuq"]
 radius = 6.0
@@ -28,3 +29,11 @@ shape = SubResource("CircleShape2D_4kxuq")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=582949031]
 position = Vector2(-1, -11)
 shape = SubResource("CircleShape2D_mti6b")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=820341380]
+
+[node name="TextBubble" parent="CanvasLayer" unique_id=531429724 instance=ExtResource("4_e1vpc")]
+offset_left = 31.0
+offset_top = 405.0
+offset_right = 29.639893
+offset_bottom = 402.456

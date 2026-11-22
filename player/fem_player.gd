@@ -3,11 +3,9 @@ class_name FemPlayer
 
 const SPEED = 200
 var current_dir = "none"
-@onready var player_collision: CollisionShape2D = $CollisionShape2D
 
 
-var can_move: bool = true
-
+var can_move: bool = false
 
 func _ready() -> void:
 	$AnimatedSprite2D.play("idle_front")
@@ -74,3 +72,4 @@ func play_animation(movements):
 			anim.play("walk_up")
 		elif movements == 0:
 			anim.play("idle_back")
+			

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b4ex8wovu5ifm" path="res://player/fem_player.gd" id="1_82524"]
 [ext_resource type="Texture2D" uid="uid://8d5hgcpa6hvt" path="res://assets/sprites/femplayer.png" id="2_68afk"]
+[ext_resource type="PackedScene" uid="uid://b83pisibaaepe" path="res://Scenes/ui/health_bar.tscn" id="3_3dfim"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_di44l"]
 atlas = ExtResource("2_68afk")
@@ -343,3 +344,16 @@ frame_progress = 0.5218252
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1381459826]
 position = Vector2(0, -9)
 shape = SubResource("CapsuleShape2D_4kxuq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1233924268]
+
+[node name="HealthBar" parent="CanvasLayer" unique_id=1824696878 instance=ExtResource("3_3dfim")]
+anchor_left = 0.411
+anchor_top = 0.031000001
+anchor_right = 0.59000003
+anchor_bottom = 0.07700001
+offset_left = -0.47201538
+offset_top = -0.08800125
+offset_right = 0.3199463
+offset_bottom = 0.10399628
+grow_vertical = 1

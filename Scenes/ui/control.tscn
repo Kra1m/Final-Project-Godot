@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://blxdr7gbn6yqu"]
 
-[ext_resource type="Script" uid="uid://claeoi6ah6quf" path="res://Scenes/control.gd" id="1_sjmnu"]
+[ext_resource type="Script" uid="uid://claeoi6ah6quf" path="res://Scenes/ui/control.gd" id="1_sjmnu"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4kxuq"]
 
@@ -38,7 +38,7 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 10
 
-[node name="Button" type="Button" parent="HBoxContainer/MarginContainer" unique_id=1112915412]
+[node name="talk_button" type="Button" parent="HBoxContainer/MarginContainer" unique_id=1112915412]
 custom_maximum_size = Vector2(-1, 300)
 layout_mode = 2
 toggle_mode = true
@@ -51,7 +51,7 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 10
 
-[node name="Button" type="Button" parent="HBoxContainer/MarginContainer2" unique_id=527434108]
+[node name="fight_button" type="Button" parent="HBoxContainer/MarginContainer2" unique_id=527434108]
 layout_mode = 2
 text = "    FIGHT    "
 
@@ -62,9 +62,12 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 10
 
-[node name="Button" type="Button" parent="HBoxContainer/MarginContainer3" unique_id=1535718811]
+[node name="runaway_button" type="Button" parent="HBoxContainer/MarginContainer3" unique_id=1535718811]
 layout_mode = 2
 text = "RUN AWAY"
 
 [connection signal="hidden" from="." to="." method="_on_hidden"]
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="HBoxContainer/MarginContainer/talk_button" to="." method="_on_talk_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/MarginContainer2/fight_button" to="." method="_on_fight_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/MarginContainer3/runaway_button" to="." method="_on_runaway_button_pressed"]

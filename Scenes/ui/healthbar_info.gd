@@ -10,9 +10,9 @@ func _ready() -> void:
 	max_value = MAX_HEALTH
 	value = max_value
 
-func getting_damage():
+func getting_damage(damage: int) -> void:
 	value -= damage
-	print("-15")
+	print("Player got damage: ", damage)
 
-func getting_healed():
+func getting_healed(healing):
 	value += healing
