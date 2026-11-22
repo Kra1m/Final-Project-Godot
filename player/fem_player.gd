@@ -4,7 +4,9 @@ class_name FemPlayer
 const SPEED = 200
 var current_dir = "none"
 
+@onready var health_bar: Control = $CanvasLayer/HealthBar
 
+var show_health_bar = true
 var can_move: bool = false
 
 func _ready() -> void:
