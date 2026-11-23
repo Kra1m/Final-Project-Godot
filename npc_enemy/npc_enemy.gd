@@ -12,3 +12,5 @@ var start_dialogue = false
 func dialogue_active():
 	if start_dialogue == true:
 		text_bubble.start()
+	print("npc stopped yapping")
+	start_dialogue = false

@@ -2,6 +2,8 @@ extends Control
 
 class_name Text_bubble
 
+@onready var controls: Control_of_options
+
 @onready var can_see_textbubble = get_node(".")
 var d_active = false
 
@@ -30,7 +32,7 @@ func load_dialogue():
 func _input(event):
 	if !d_active:
 		return
-	if event.is_action_pressed("interact"):
+	if event.is_action_pressed("interact") or event.is_action_pressed("click"):
 		next_script()
 
 func next_script():
@@ -38,6 +40,7 @@ func next_script():
 	if current_dialogue_id >= len(dialogue):
 		d_active = false
 		can_see_textbubble.visible = false
+		print("dialogue ended")
 		return
 	
 	$Panel/MarginContainer/VBoxContainer/Name.text = dialogue[current_dialogue_id]['name']
